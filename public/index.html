@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MeanBlogApp">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <title>Client Side</title>
+</head>
+<body>
+<!-- Creating a view -->
+<div ng_controller="BlogController">
+
+    <h1>
+        {{hello}}
+    </h1>
+
+</div>
+
+
+
+
+<!-- The below snippet declares that this is an angular application-->
+<script>
+
+    angular
+            .module("MeanBlogApp",[])
+            .controller("BlogController", BlogController);
+
+
+    <!-- Defining the Blog Controller function -->
+
+    function BlogController($scope) {
+        $scope.hello = "Shailesh MEAN Blog App";
+
+    }
+
+
+</script>
+
+</body>
+</html>
